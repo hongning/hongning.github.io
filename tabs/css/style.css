@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+table{
+    border-collapse: collapse;
+}
+table td{
+    border:1px solid #000;
+    padding:5px;
+}
+.up-arr{
+    width: 0;
+    height: 0;
+    border-left:5px solid transparent;
+    border-right:5px solid transparent;
+    border-bottom:10px solid #000;
+    display: inline-block;
+}
+.down-arr{
+    width: 0;
+    height: 0;
+    border-left:5px solid transparent;
+    border-right:5px solid transparent;
+    border-top:10px solid #000;
+    display: inline-block;
+}

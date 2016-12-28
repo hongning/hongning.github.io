@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+    <div>
+        <input type="text" placeholder="firstname" ng-model="firName">
+        <input type="text" placeholder="lastname" ng-model="lasName">
+        <input type="checkbox" ng-model="checks" ng-click="show(checks)">
+        <span>Exact Match</span>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <td ng-click="click('firstname')">FirstName <span ng-class="addC('firstname')"></span></td>
+                <td ng-click="click('lastname')">LastName <span ng-class="addC('lastname')"></span></td>
+                <td ng-click="click('gender')">Gender <span ng-class="addC('gender')"></span></td>
+                <td ng-click="click('salary')">Salary <span ng-class="addC('salary')"></span></td>
+                <td ng-click="click('salary')">Salary <span ng-class="addC('salary')"></span></td>
+                <td ng-click="click('birthday')">Birthday <span ng-class="addC('birthday')"></span></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in person | filter:find:val | orderBy:title:dsc" ng-show="checkn">
+                <td>{{item.firstname}}</td>
+                <td>{{item.lastname}}</td>
+                <td>{{item.gender}}</td>
+                <td>{{item.salary | currency:""}}</td>
+                <td>{{item.salary | currency:"$"}}</td>
+                <td>{{item.birthday | date:"yyyy-MM-dd"}}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+<script src="js/angular.js"></script>
+<script src="js/index.js"></script>
+</html>
