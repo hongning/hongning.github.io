@@ -4,14 +4,88 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 </head>
+<style>
+	*{
+		padding: 0;
+		margin:0;
+		list-style: none;
+		text-decoration: none;
+	}
+	body,html{
+		width: 100%;
+		height: 100%;
+	}
+	.main{
+		width: 100%;
+       height: 100%;
+	}
+
+	.main .top {
+    width: 100%;
+    height: 120px;
+    background: red;
+    border-bottom: 2px solid #ccc; 
+   }
+   .main .top h1{
+   	 text-align: center;
+   	 line-height: 120px;
+   }
+   .main .content {
+    width: 100%;
+    height: 500px;
+}
+.main .content .right {
+      width: 100%;
+      height: 500px;
+      background: wheat;
+      float: left;
+  }
+  .main .content .right .container {
+        padding-left: 300; 
+    }
+    .main .content .left {
+      width: 300px;
+      height: 500px;
+      background: pink;
+      float: left;
+      margin-left: -100%; 
+  }
+  .main .content .left nav {
+        padding: 30px 10px 0 10px;
+         }
+        .main .content .left nav a {
+          display: block;
+          height: 30px;
+          line-height: 30px;
+          color:#fff;
+      }
+ 
+</style>
 <body>
-	<h2>index.html首页</h2>
-	 <ul>
-		<li>首页</li>
-		<li><a href="html/pro.html">项目</a></li>
-		<li>爱好</li>
-		<li>关于</li>
-	 </ul>
+	<div class="main" ng-controller="mainCntroller">
+		<div class="top">
+			<h1>个人简历</h1>
+		</div>
+		<div class="content">
+		<div class="right">
+			<div class="container">
+	
+				<div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="left">
+			<nav>			
+				<a href="javascript:(0)">首页</a>
+				<a href="html/pro.html">个人简介</a>
+				<a href="javascript:(0)">关于项目</a>
+
+			</nav>
+			
+		</div>
+
+	</div>
 	
 </body>
 </html>
